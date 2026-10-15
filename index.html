@@ -1,30 +1,101 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Subalo Belay | Electrical Engineer Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102830">
+  <title>Subalo Belay | Electrical Engineer</title>
+  <meta name="description" content="Electrical and Electronics Engineering graduate from Ariel University. Explore Subalo Belay's FPGA Smart Lock and Digital Safe hardware projects.">
+  <link rel="canonical" href="https://subalo.github.io/portfolio-/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Subalo Belay | Electrical Engineer">
+  <meta property="og:description" content="From digital logic to integrated systems. FPGA, VHDL, Python and hands-on hardware projects.">
+  <meta property="og:url" content="https://subalo.github.io/portfolio-/">
+  <meta property="og:image" content="https://subalo.github.io/portfolio-/assets/images/social-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Subalo Belay, Electrical Engineer, with his PYNQ-Z2 Smart Lock prototype.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="color-scheme" content="light">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="site.js" defer></script>
+  <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Person","name":"Subalo Belay","url":"https://subalo.github.io/portfolio-/","email":"mailto:subalo.belay1@gmail.com","alumniOf":{"@type":"CollegeOrUniversity","name":"Ariel University"},"sameAs":["https://github.com/Subalo","https://www.linkedin.com/in/subalo-belay"],"knowsAbout":["Electrical engineering","VHDL","FPGA","Python","OpenCV"]}
+  </script>
 </head>
 <body>
-  <main>
-    <h1>Subalo Belay</h1>
-    <p>Electrical Engineering Student | Logic & Hardware Systems</p>
-
-    <h2>Project: Digital Safe</h2>
-    <ul>
-      <li><a href="project_report.pdf" download>📄 Full Report</a></li>
-      <li><a href="project_poster.pdf" download>🖼 Poster</a></li>
-      <li><a href="project_presentation.pptx" download>📊 Presentation</a></li>
-    </ul>
-
-    <h2>Contact</h2>
-    <p>
-      <a href="mailto:your.email@example.com">Email</a> |
-      <a href="https://github.com/subalo" target="_blank">GitHub</a> |
-      <a href="https://linkedin.com/in/subalo-belay" target="_blank">LinkedIn</a>
-    </p>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner wrap">
+      <a class="brand" href="#home" aria-label="Subalo Belay, back to top"><span class="brand-symbol" aria-hidden="true">s<span>b</span><i></i></span><span class="brand-name">Subalo Belay<span>Electrical Engineer</span></span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span>Menu</span><span class="menu-lines" aria-hidden="true"></span></button>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation"><a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a class="nav-contact" href="#contact">Let's connect <span aria-hidden="true">↗</span></a></nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="hero-heading">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-inner wrap">
+        <div class="hero-copy">
+          <p class="eyebrow light"><span class="status-dot" aria-hidden="true"></span> Open to junior engineering opportunities</p>
+          <h1 id="hero-heading">Subalo Belay<span>Electrical<br><em>Engineer.</em></span></h1>
+          <p class="hero-description">From digital logic to integrated systems.<br>I build hardware projects that connect programmable logic, software and the physical world.</p>
+          <div class="hero-actions"><a class="button button-mint" href="#projects">Explore my work <span aria-hidden="true">↗</span></a><a class="text-link light-link" href="#contact">Get in touch <span aria-hidden="true">→</span></a></div>
+          <div class="hero-education"><span class="education-mark" aria-hidden="true">⌁</span><p>B.Sc. Electrical &amp; Electronics Engineering<span>Ariel University · Computers &amp; Communications</span></p></div>
+        </div>
+        <a class="hero-build" href="#smart-lock" aria-label="Explore the Smart Lock System final project">
+          <div class="build-topline"><span><i aria-hidden="true"></i> FROM THE WORKBENCH</span><span>PROJECT / 01</span></div>
+          <div class="hero-photo"><img src="assets/images/smart-lock-prototype.jpg" alt="The Smart Lock prototype on a workbench, including its PYNQ-Z2 board, keypad, sensors and wiring." width="1059" height="1372" fetchpriority="high"><span class="photo-corner top" aria-hidden="true"></span><span class="photo-corner bottom" aria-hidden="true"></span><span class="grade-stamp"><strong>93<span>/100</span></strong><span>FINAL PROJECT GRADE</span></span></div>
+          <div class="build-caption"><div><h2>Smart Lock System</h2><p>PYNQ-Z2 · FPGA · Computer vision</p></div><span class="circle-arrow" aria-hidden="true">↗</span></div>
+        </a>
+      </div>
+      <div class="focus-strip"><div class="wrap"><span class="focus-label">ENGINEERING FOCUS</span><span>Hardware development</span><i aria-hidden="true">/</i><span>Communication systems</span><i aria-hidden="true">/</i><span>Hardware testing</span></div></div>
+    </section>
+    <section class="about section-space wrap" id="about" aria-labelledby="about-heading">
+      <div class="section-label"><span>01</span> A little about me</div>
+      <div class="about-layout"><h2 id="about-heading">Curious by nature.<br><span>Hands-on by choice.</span></h2><div class="about-text"><p>I'm an Electrical and Electronics Engineering graduate from Ariel University, specializing in <strong>Computers and Communications</strong>.</p><p>My academic projects span digital logic, FPGA development, circuit simulation and hardware–software integration. I enjoy following a system all the way from its block diagram to its behavior on the bench.</p><p>I'm looking for a junior role in <strong>hardware development, communications, or hardware and communication testing</strong>, where I can contribute, learn and keep building.</p><a class="text-link" href="https://www.linkedin.com/in/subalo-belay" target="_blank" rel="noopener noreferrer">More about me on LinkedIn <span aria-hidden="true">↗</span></a></div></div>
+    </section>
+    <section class="projects section-space" id="projects" aria-labelledby="projects-heading">
+      <div class="wrap">
+        <div class="section-label"><span>02</span> Featured projects</div>
+        <div class="section-heading-row"><h2 id="projects-heading">Built. Connected.<br><span>Tested.</span></h2><p>Two projects. Different approaches.<br>A shared focus on working hardware.</p></div>
+        <article class="project-card featured-project" id="smart-lock" aria-labelledby="smart-lock-heading">
+          <div class="project-card-top"><p class="project-kicker"><span class="tiny-square" aria-hidden="true"></span> FEATURED · B.SC. FINAL PROJECT</p><span class="project-index">01 / FPGA + SOFTWARE</span></div>
+          <div class="project-intro"><div><h3 id="smart-lock-heading">Smart Lock System<span class="grade-tag">93 / 100</span></h3><p class="project-lede">A face-recognition access system.<br>Hardware and software, working together.</p></div><p class="project-overview">Built on the PYNQ-Z2, this system combines Python and OpenCV on the processing system with a VHDL stepper-motor controller in programmable logic. Sensors, keypad access and Telegram alerts complete the control loop.</p></div>
+          <ul class="tags" aria-label="Smart Lock technologies"><li>PYNQ-Z2</li><li>FPGA</li><li>VHDL</li><li>Vivado</li><li>Python</li><li>OpenCV</li><li>AXI GPIO</li><li>Telegram</li></ul>
+          <div class="architecture-panel">
+            <div class="diagram-topline"><span>THE SYSTEM AT A GLANCE</span><span>INPUT → PROCESS → ACT</span></div>
+            <div class="architecture" role="group" aria-label="Smart Lock high-level architecture">
+              <div class="architecture-node"><span class="node-number">01 / INPUT</span><h4>Sense &amp; identify</h4><ul><li>USB camera</li><li>PIR, light &amp; door sensors</li><li>4 × 4 keypad</li></ul></div><span class="diagram-arrow" aria-hidden="true">→</span>
+              <div class="architecture-core"><span class="core-name">PYNQ-Z2 <span>Zynq-7000</span></span><div class="core-halves"><div><span class="core-label">PS / SOFTWARE</span><h4>Python + OpenCV</h4><p>Face recognition<br>Access logic &amp; event logs</p></div><div><span class="core-label">PL / HARDWARE</span><h4>VHDL controller</h4><p>Stepper-motor FSM<br>Vivado IP + AXI GPIO</p></div></div></div><span class="diagram-arrow" aria-hidden="true">→</span>
+              <div class="architecture-node"><span class="node-number">03 / OUTPUT</span><h4>Act &amp; notify</h4><ul><li>Stepper + ULN2003</li><li>Relay, LEDs &amp; buzzer</li><li>Telegram messages &amp; photos</li></ul></div>
+            </div>
+            <p class="diagram-note">High-level functional overview. Telegram alerts and event logging run in Python; the motor controller runs in the FPGA.</p>
+          </div>
+          <div class="project-capabilities"><div><span class="feature-line" aria-hidden="true">01</span><h4>Recognize</h4><p>Haar Cascade face detection and LBPH recognition, with keypad access as a backup.</p></div><div><span class="feature-line" aria-hidden="true">02</span><h4>Control</h4><p>VHDL motor sequencing, sensor inputs and door-state feedback for the locking process.</p></div><div><span class="feature-line" aria-hidden="true">03</span><h4>Respond</h4><p>Failed-attempt handling, temporary lockout, Telegram alerts and CSV event logs.</p></div></div>
+          <details class="engineering-details"><summary>Inside the engineering <span aria-hidden="true">+</span></summary><div class="engineering-content"><div><h4>Hardware–software integration</h4><p>A custom VHDL motor controller is packaged as IP in Vivado. Python communicates with the programmable logic through an overlay and AXI GPIO interfaces.</p></div><div><h4>Verification</h4><p>Vivado simulations check the stepper phase sequences. System checks in Jupyter cover startup, access attempts, sensor behavior and alert handling.</p></div><a class="text-link" href="assets/images/smart-lock-wiring.jpg" data-lightbox data-caption="Smart Lock — original wiring diagram from page 33 of the project report.">View the original wiring diagram <span aria-hidden="true">↗</span></a></div></details>
+          <div class="project-gallery" aria-label="Smart Lock project evidence">
+            <a class="gallery-item" href="assets/images/smart-lock-vivado.png" data-lightbox data-caption="Smart Lock — original Vivado block design from the project report."><div class="gallery-image schematic"><img src="assets/images/smart-lock-vivado.png" alt="Original Vivado block design connecting the Zynq processing system, AXI interfaces and custom motor IP." width="1897" height="723" loading="lazy" decoding="async"><span class="gallery-expand" aria-hidden="true">↗</span></div><span class="gallery-caption">Vivado block design <span>01</span></span></a>
+            <a class="gallery-item" href="assets/images/smart-lock-waveform.png" data-lightbox data-caption="Smart Lock — original stepper-controller simulation from the project report."><div class="gallery-image waveform"><img src="assets/images/smart-lock-waveform.png" alt="Vivado simulation waveform showing the stepper motor controller's control inputs and output phases." width="939" height="379" loading="lazy" decoding="async"><span class="gallery-expand" aria-hidden="true">↗</span></div><span class="gallery-caption">Controller simulation <span>02</span></span></a>
+          </div>
+          <div class="project-downloads"><span class="download-label">PROJECT FILES <small>Hebrew documentation</small></span><div><a class="download-link" href="assets/docs/smart-lock-report.pdf" target="_blank" rel="noopener noreferrer">Report <span>PDF ↗</span></a><a class="download-link" href="assets/docs/smart-lock-poster.pdf" target="_blank" rel="noopener noreferrer">Poster <span>PDF ↗</span></a><a class="download-link" href="assets/docs/smart-lock-presentation.pptx" download>Presentation <span>PPTX ↓</span></a></div></div>
+        </article>
+        <article class="project-card safe-project" id="digital-safe" aria-labelledby="digital-safe-heading">
+          <div class="safe-visual"><a href="assets/images/digital-safe-prototype.jpg" data-lightbox data-caption="Digital Safe — the original assembled logic-based prototype from the project report."><img src="assets/images/digital-safe-prototype.jpg" alt="Assembled Digital Safe prototype with logic ICs, breadboards, keypad, indicator LEDs and wiring." width="833" height="746" loading="lazy" decoding="async"><span class="photo-label">THE ORIGINAL BUILD <span aria-hidden="true">↗</span></span></a></div>
+          <div class="safe-content"><div class="project-card-top"><p class="project-kicker">DIGITAL LOGIC PROJECT</p><span class="project-index">02</span></div><h3 id="digital-safe-heading">Digital Safe</h3><p class="project-lede">Access control,<br>built from logic.</p><p class="project-overview">An electronic safe built from shift registers, flip-flops, logic gates and timers. The logic-based implementation validates the input sequence, controls the unlock interval and triggers an alert after repeated incorrect attempts.</p><p class="safe-secondary">An Arduino implementation also explores a programmable approach to the same functionality.</p><ul class="tags" aria-label="Digital Safe technologies"><li>Digital logic</li><li>Multisim</li><li>555 timers</li><li>Arduino / C++</li></ul><a class="text-link scope-link" href="assets/images/digital-safe-scope.png" data-lightbox data-caption="Digital Safe — original oscilloscope measurement from the project report.">View bench measurement <span aria-hidden="true">↗</span></a><div class="safe-downloads"><a class="download-link" href="project_report.pdf" target="_blank" rel="noopener noreferrer">Report <span>PDF ↗</span></a><a class="download-link" href="project_poster.pdf" target="_blank" rel="noopener noreferrer">Poster <span>PDF ↗</span></a><a class="download-link" href="project_presentation.pptx" download>Presentation <span>PPTX ↓</span></a></div></div>
+        </article>
+      </div>
+    </section>
+    <section class="skills section-space wrap" id="skills" aria-labelledby="skills-heading">
+      <div class="section-label"><span>03</span> Technical skills</div><div class="section-heading-row"><h2 id="skills-heading">The tools behind<br><span>the work.</span></h2><p>Tools and technologies used in<br>my studies and hands-on projects.</p></div>
+      <div class="skills-grid"><div class="skill-group"><span class="skill-icon" aria-hidden="true">▤</span><span class="skill-number">01</span><h3>Digital hardware</h3><ul><li>VHDL</li><li>Vivado</li><li>FPGA / PYNQ-Z2</li><li>AXI GPIO</li></ul></div><div class="skill-group"><span class="skill-icon code-icon" aria-hidden="true">&lt;/&gt;</span><span class="skill-number">02</span><h3>Programming &amp; vision</h3><ul><li>Python</li><li>OpenCV</li><li>Arduino / C++</li><li>Jupyter Notebook</li></ul></div><div class="skill-group"><span class="skill-icon" aria-hidden="true">∿</span><span class="skill-number">03</span><h3>Simulation &amp; analysis</h3><ul><li>MATLAB</li><li>Multisim</li><li>LTspice</li></ul></div><div class="skill-group"><span class="skill-icon" aria-hidden="true">⌁</span><span class="skill-number">04</span><h3>Lab &amp; integration</h3><ul><li>Oscilloscope</li><li>Signal generator</li><li>Sensor integration</li><li>Hardware debugging</li></ul></div></div>
+    </section>
+    <section class="contact section-space" id="contact" aria-labelledby="contact-heading">
+      <div class="wrap"><div class="section-label light"><span>04</span> Get in touch</div><div class="contact-layout"><div><p class="eyebrow light"><span class="status-dot" aria-hidden="true"></span> Ready for the next challenge</p><h2 id="contact-heading">Good engineering<br>starts with a<br><span>conversation.</span></h2><p class="contact-description">Have a junior opportunity in hardware, communications or testing? I'd be glad to connect.</p></div><div class="contact-links"><a class="email-link" href="mailto:subalo.belay1@gmail.com"><span>EMAIL</span><strong>subalo.belay1@gmail.com</strong><i aria-hidden="true">↗</i></a><button class="copy-email" type="button" data-email="subalo.belay1@gmail.com" hidden>Copy email address <span aria-hidden="true">⧉</span></button><p class="copy-status" role="status" aria-live="polite"></p><div class="social-links"><a href="https://www.linkedin.com/in/subalo-belay" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a><a href="https://github.com/Subalo" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></div><p class="contact-note">B.Sc. graduate · Electrical &amp; Electronics Engineering<br>Ariel University, Israel</p></div></div></div>
+    </section>
   </main>
+  <footer class="site-footer"><div class="wrap"><a class="footer-name" href="#home">Subalo Belay<span> / Electrical Engineer</span></a><p>© 2026 Subalo Belay</p><a class="back-top" href="#home">Back to top <span aria-hidden="true">↑</span></a></div></footer>
+  <dialog class="image-dialog" aria-labelledby="image-dialog-caption"><button class="dialog-close" type="button" aria-label="Close image">Close <span aria-hidden="true">×</span></button><div class="dialog-image-wrap"><img src="assets/images/smart-lock-vivado.png" alt="" width="1897" height="723"></div><p id="image-dialog-caption"></p></dialog>
 </body>
 </html>
-
