@@ -14,8 +14,8 @@ def inline_file(relative):
     return "data:" + mime + ";base64," + base64.b64encode(data).decode()
 
 html = (ROOT / "index.html").read_text()
-html = html.replace('<link rel="stylesheet" href="style.css">', "<style>" + (ROOT / "style.css").read_text() + "</style>")
-html = html.replace('<script src="site.js" defer></script>', "<script>" + (ROOT / "site.js").read_text() + "</script>")
+html = re.sub(r'<link rel="stylesheet" href="style\.css(?:\?[^"<>]*)?">', lambda _: "<style>" + (ROOT / "style.css").read_text() + "</style>", html)
+html = re.sub(r'<script src="site\.js(?:\?[^"<>]*)?" defer></script>', lambda _: "<script>" + (ROOT / "site.js").read_text() + "</script>", html)
 # Inline script must still execute after the DOM exists in the standalone file.
 start = html.index("<script>/* Content")
 end = html.index("</script>", start) + len("</script>")
