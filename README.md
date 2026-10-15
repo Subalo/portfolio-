@@ -20,7 +20,7 @@ Create a single-file preview with embedded styles, scripts and images:
 
     python3 scripts/make-preview.py
 
-The generated review/portfolio-preview.html can be opened directly. Its document links point to the review branch on GitHub. The generated preview is not a production file.
+The generated review/portfolio-preview.html can be opened directly. Its document links point to the published main branch on GitHub. The generated preview is not a production file; an already downloaded copy does not receive website updates.
 
 ## GitHub Pages
 
@@ -30,7 +30,9 @@ Before the redesign, the original site was preserved on:
 
     backup/pre-redesign-2026-10-15
 
-The duplicate site's files were backed up on the same branch name in Subalo/subalo.github.io before its homepage and stylesheet were removed. Its project attachments were preserved.
+The existing CV address, https://subalo.github.io/, and the older /portfolio-2025/ path remain supported by redirect pages in Subalo/subalo.github.io. The original files were backed up on the same branch name, and its project attachments were preserved. Keep both entry pages pointing at the latest release when publishing a website update.
+
+Stylesheet and script URLs include content hashes to keep cached assets consistent with the page. Refresh these hashes after editing either asset, then regenerate the standalone preview.
 
 ## Content and media
 

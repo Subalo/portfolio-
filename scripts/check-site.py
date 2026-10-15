@@ -2,9 +2,10 @@
 from collections import Counter
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.parse import unquote, urlsplit
+from urllib.parse import parse_qs, unquote, urlsplit
 import hashlib
 import json
+import re
 import sys
 import xml.etree.ElementTree as ET
 
@@ -21,6 +22,8 @@ class Page(HTMLParser):
         self.headings = Counter()
         self.lang = None
         self.blank_rel = []
+        self.telephones = []
+        self._telephone = None
     def handle_starttag(self, tag, attributes):
         attrs = dict(attributes)
         if tag == "html":
@@ -35,6 +38,8 @@ class Page(HTMLParser):
             self.images.append(attrs)
         if tag == "a" and attrs.get("target") == "_blank":
             self.blank_rel.append(attrs.get("rel", ""))
+        if tag == "a" and attrs.get("href", "").startswith("tel:"):
+            self._telephone = {"href": attrs["href"], "text": ""}
         if tag in ("h1", "h2", "h3", "h4"):
             self.headings[tag] += 1
         if tag == "meta":
@@ -42,6 +47,13 @@ class Page(HTMLParser):
         for name in ("aria-labelledby", "aria-controls"):
             if name in attrs:
                 self.references.extend(attrs[name].split())
+    def handle_data(self, data):
+        if self._telephone is not None:
+            self._telephone["text"] += data
+    def handle_endtag(self, tag):
+        if tag == "a" and self._telephone is not None:
+            self.telephones.append(self._telephone)
+            self._telephone = None
 
 errors = []
 html = (ROOT / "index.html").read_text()
@@ -80,6 +92,29 @@ if any("noopener" not in rel.split() for rel in page.blank_rel):
 for placeholder in ("your.email@example.com", "Lorem ipsum", "Engineering Student"):
     if placeholder in html:
         errors.append("Outdated or placeholder content: " + placeholder)
+try:
+    person = json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>', html, re.S).group(1))
+    expected_phone = person["telephone"]
+    if not page.telephones:
+        errors.append("Missing visible phone link.")
+    for phone in page.telephones:
+        digits = re.sub(r"\D", "", phone["text"])
+        displayed = "+972" + digits[1:] if digits.startswith("0") else "+" + digits
+        if phone["href"] != "tel:" + expected_phone or displayed != expected_phone:
+            errors.append("Displayed phone, dialing link and metadata do not agree.")
+except (AttributeError, KeyError, json.JSONDecodeError) as exc:
+    errors.append("Invalid person contact metadata: " + str(exc))
+for asset in ("style.css", "site.js"):
+    references = [urlsplit(link) for link in page.links if urlsplit(link).path == asset]
+    version = hashlib.sha256((ROOT / asset).read_bytes()).hexdigest()[:12]
+    if len(references) != 1 or parse_qs(references[0].query).get("v") != [version]:
+        errors.append("Missing or outdated asset version: " + asset)
+css = (ROOT / "style.css").read_text()
+for size in re.findall(r"font-size:([^;\n}]+)", css):
+    if "px" in size:
+        errors.append("Use relative type sizes: " + size)
+    if any(float(value) < .75 for value in re.findall(r"([\d.]+)rem", size)):
+        errors.append("Text is smaller than the 12 px label baseline: " + size)
 for name, expected in json.loads((ROOT / "docs/original-attachments.json").read_text()).items():
     actual = hashlib.sha256((ROOT / name).read_bytes()).hexdigest()
     if actual != expected:
@@ -94,3 +129,4 @@ if errors:
     sys.exit(1)
 print(f"PASS: {len(page.links)} local/external references inspected; {len(page.ids)} unique anchors; metadata and ARIA targets valid.")
 print("PASS: all three original Digital Safe attachments are unchanged.")
+print("PASS: phone links, contact metadata, asset versions and minimum relative type sizes are valid.")

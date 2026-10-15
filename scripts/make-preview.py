@@ -1,12 +1,11 @@
-"""Create an offline visual preview; document downloads use the review branch."""
+"""Create an offline visual preview; document downloads use the published branch."""
 from pathlib import Path
-from html.parser import HTMLParser
 import base64
 import mimetypes
 import re
 
 ROOT = Path(__file__).resolve().parents[1]
-ASSET_BASE = "https://raw.githubusercontent.com/Subalo/portfolio-/feature/portfolio-redesign/"
+ASSET_BASE = "https://raw.githubusercontent.com/Subalo/portfolio-/main/"
 
 def inline_file(relative):
     data = (ROOT / relative).read_bytes()

@@ -16,6 +16,8 @@ All professional claims describe academic work or information explicitly supplie
 | Digital Safe oscilloscope measurement | Original report, PDF page 51 |
 | MATLAB, LTspice, Multisim, oscilloscope and signal generator | Owner's supplied engineering background |
 | Email address and LinkedIn URL | Existing portfolio's displayed contact information |
+| Phone number, 054-297-8448 | Explicitly supplied by the owner on October 15, 2026 |
+| Header portrait | Owner's supplied LinkedIn portrait; resized for the website without changing the face |
 
 A separate report authored by another person was identified as reference material and was excluded from the portfolio's project media.
 
