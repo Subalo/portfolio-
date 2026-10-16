@@ -2930,3 +2930,15 @@ em {
     gap:10px 22px;
   }
 }
+
+/* Keep the approved concept illustration fully visible at every viewport. */
+.hero-photo.concept-cover {
+  height:auto;
+  aspect-ratio:3 / 2;
+  background:#142c43;
+}
+.hero-photo.concept-cover>img {
+  display:block;
+  object-fit:contain;
+  object-position:center;
+}
