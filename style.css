@@ -855,11 +855,20 @@ em {
   grid-template-columns:1fr 1fr;
   gap:20px;
 }
+.project-gallery > .gallery-item {
+  min-width:0;
+}
 .project-gallery > .wiring-diagram {
   grid-column:1/-1;
 }
 .wiring-diagram .gallery-image {
   height:clamp(280px,52vw,530px);
+  aspect-ratio:auto;
+  grid-template: minmax(0,1fr) / minmax(0,1fr);
+}
+.wiring-diagram .gallery-image>img {
+  min-width:0;
+  min-height:0;
 }
 .gallery-image {
   height:clamp(180px,16vw,280px);
