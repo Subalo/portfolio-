@@ -850,6 +850,23 @@ em {
   color:var(--muted);
   margin-top:10px;
 }
+.project-shortcuts {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px 18px;
+  margin:0 0 20px;
+}
+.project-shortcuts a {
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  min-height:44px;
+  font-size:0.875rem;
+  font-weight:650;
+  color:#1d5044;
+  text-decoration:underline;
+  text-underline-offset:4px;
+}
 .project-gallery {
   display:grid;
   grid-template-columns:1fr 1fr;
