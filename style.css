@@ -855,6 +855,12 @@ em {
   grid-template-columns:1fr 1fr;
   gap:20px;
 }
+.project-gallery > .wiring-diagram {
+  grid-column:1/-1;
+}
+.wiring-diagram .gallery-image {
+  height:clamp(280px,52vw,530px);
+}
 .gallery-image {
   height:clamp(180px,16vw,280px);
   border:1px solid #dce4de;
