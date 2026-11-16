@@ -18,7 +18,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="color-scheme" content="light">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=784ba991867b">
+  <link rel="stylesheet" href="style.css?v=ee348a97b460">
   <script src="site.js?v=bd8efa7d40ee" defer></script>
   <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"Person","name":"Subalo Belay","url":"https://subalo.github.io/portfolio-/","email":"mailto:subalo.belay1@gmail.com","telephone":"+972542978448","alumniOf":{"@type":"CollegeOrUniversity","name":"Ariel University"},"sameAs":["https://github.com/Subalo","https://www.linkedin.com/in/subalo-belay"],"knowsAbout":["Electrical engineering","VHDL","FPGA","Python","OpenCV"]}
@@ -64,10 +64,9 @@
           <div class="project-card-top"><p class="project-kicker"><span class="tiny-square" aria-hidden="true"></span> FEATURED · B.SC. FINAL PROJECT</p><span class="project-index">01 / FPGA + SOFTWARE</span></div>
           <div class="project-intro"><div><h3 id="smart-lock-heading">Smart Lock System<span class="grade-tag">93 / 100</span></h3><p class="project-lede">A face-recognition access system.<br>Hardware and software, working together.</p></div><p class="project-overview">Built on the PYNQ-Z2, this system combines Python and OpenCV on the processing system with a VHDL stepper-motor controller in programmable logic. Sensors, keypad access and Telegram alerts complete the control loop.</p></div>
           <ul class="tags" aria-label="Smart Lock technologies"><li>PYNQ-Z2</li><li>FPGA</li><li>VHDL</li><li>Vivado</li><li>Python</li><li>OpenCV</li><li>AXI GPIO</li><li>Telegram</li></ul>
-          <nav class="project-shortcuts" aria-label="Smart Lock resources">
-            <a href="#smart-lock-wiring">Wiring diagram <span aria-hidden="true">↓</span></a>
+          <div class="project-shortcuts">
             <a href="#smart-lock-downloads">Code &amp; downloads <span aria-hidden="true">↓</span></a>
-          </nav>
+          </div>
           <div class="architecture-panel">
             <div class="diagram-topline"><span>THE SYSTEM AT A GLANCE</span><span>INPUT → PROCESS → ACT</span></div>
             <div class="architecture" role="group" aria-label="Smart Lock high-level architecture">
@@ -82,7 +81,6 @@
           <div class="project-gallery" aria-label="Smart Lock project evidence">
             <a class="gallery-item" href="assets/images/smart-lock-vivado.png" data-lightbox data-caption="Smart Lock — original Vivado block design from the project report."><div class="gallery-image schematic"><img src="assets/images/smart-lock-vivado.png" alt="Original Vivado block design connecting the Zynq processing system, AXI interfaces and custom motor IP." width="1897" height="723" loading="lazy" decoding="async"><span class="gallery-expand" aria-hidden="true">↗</span></div><span class="gallery-caption">Vivado block design <span>01</span></span></a>
             <a class="gallery-item" href="assets/images/smart-lock-waveform.png" data-lightbox data-caption="Smart Lock — original stepper-controller simulation from the project report."><div class="gallery-image waveform"><img src="assets/images/smart-lock-waveform.png" alt="Vivado simulation waveform showing the stepper motor controller's control inputs and output phases." width="939" height="379" loading="lazy" decoding="async"><span class="gallery-expand" aria-hidden="true">↗</span></div><span class="gallery-caption">Controller simulation <span>02</span></span></a>
-            <a class="gallery-item wiring-diagram" id="smart-lock-wiring" href="assets/images/smart-lock-wiring-current.png" data-lightbox data-caption="Smart Lock wiring. Blue identifies verified pin assignments, green identifies the original power rails, and amber identifies proposed rebuild connections."><div class="gallery-image"><img src="assets/images/smart-lock-wiring-current.png" alt="Smart Lock wiring diagram showing PYNQ-Z2 signal pins, the original 5 V and 3.3 V rails, ground, and proposed rebuild connections." width="1720" height="1690" loading="lazy" decoding="async"><span class="gallery-expand" aria-hidden="true">↗</span></div><span class="gallery-caption">Wiring diagram <span>View diagram</span></span></a>
           </div>
           <div class="project-downloads"><span class="download-label">PROJECT FILES <small>Hebrew documentation</small></span><div><a class="download-link" href="assets/docs/smart-lock-report.pdf" target="_blank" rel="noopener noreferrer">Report <span>PDF ↗</span></a><a class="download-link" href="assets/docs/smart-lock-poster.pdf" target="_blank" rel="noopener noreferrer">Poster <span>PDF ↗</span></a><a class="download-link" href="assets/docs/smart-lock-presentation.pptx" download>Presentation <span>PPTX ↓</span></a></div></div>
           <div class="project-downloads" id="smart-lock-downloads"><span class="download-label">CODE &amp; DOWNLOADS <small>PYNQ-Z2 overlay v1.0.0 · download both files</small></span><div><a class="download-link" href="https://github.com/Subalo/smart-lock-fpga" target="_blank" rel="noopener noreferrer">Source code <span>GitHub ↗</span></a><a class="download-link" href="https://github.com/Subalo/smart-lock-fpga/releases/download/v1.0.0/design_1.bit">design_1.bit <span>↓</span></a><a class="download-link" href="https://github.com/Subalo/smart-lock-fpga/releases/download/v1.0.0/design_1.hwh">design_1.hwh <span>↓</span></a><a class="download-link" href="https://github.com/Subalo/smart-lock-fpga/releases/tag/v1.0.0" target="_blank" rel="noopener noreferrer">Release notes <span>GitHub ↗</span></a></div></div>
